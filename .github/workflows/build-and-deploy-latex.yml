@@ -54,3 +54,10 @@ jobs:
         run: |
           tag_name=${{ github.ref_name }}
           gh release create "$tag_name" resume.pdf --title "Release $tag_name" --notes "Compiled LaTeX PDF" --repo ${{ github.repository }}
+          
+          # Wait a few seconds to ensure assets are uploaded
+          sleep 10
+          
+          # Delete automatically added source code assets
+          gh release delete-asset "$tag_name" "Source code (zip)" --repo ${{ github.repository }} || true
+          gh release delete-asset "$tag_name" "Source code (tar.gz)" --repo ${{ github.repository }} || true

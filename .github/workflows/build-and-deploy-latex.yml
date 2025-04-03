@@ -53,7 +53,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag_name=${{ github.ref_name }}
-          gh release create "$tag_name" resume.pdf --title "Release $tag_name" --notes "Compiled LaTeX PDF" --repo ${{ github.repository }}
+          # Check if the release already exists
+          if gh release view "$tag_name" --repo ${{ github.repository }} > /dev/null 2>&1; then
+            echo "Release already exists. Updating..."
+            gh release upload "$tag_name" resume.pdf --clobber --repo ${{ github.repository }}
+          else
+            echo "Creating new release..."
+            gh release create "$tag_name" resume.pdf --title "Release $tag_name" --notes "Compiled LaTeX PDF" --repo ${{ github.repository }}
+          fi
           
           # Wait a few seconds to ensure assets are uploaded
           sleep 10

@@ -21,12 +21,14 @@
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+% Specify the location of the included fonts
+\fontdir[fonts/]
 
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-nephritis}
+\colorlet{awesome}{awesome-emerald}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -51,21 +53,21 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
 \name{Andrea}{Serafini}
-\position{Software Engineer and Developer}
+\position{Software Engineer and Developer \\[0.3cm]}
 \address{Viale Rapallo, Rimini, Italy \\[0.3cm]}
 
-%\mobile{(+82) 10-9030-1843}
+\mobile{(+39) 339-4159299}
 \email{serafini.me@gmail.com}
 % \homepage{www.unibo.it/sitoweb/gianluca.aguzzi/en}
-\github{Andrea-Serafini}
-\linkedin{ing-serafini-andrea}
+% \github{Andrea-Serafini}
+% \linkedin{ing-serafini-andrea}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
 % \medium{madium-id}
-%\googlescholar{YY_KZzoAAAAJ}{Gianluca Aguzzi}
+% \googlescholar{YY_KZzoAAAAJ}{Gianluca Aguzzi}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
@@ -92,8 +94,9 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
-\input{resume/education.tex}
 \input{resume/experience.tex}
+\input{resume/education.tex}
+\input{resume/skills.tex}
 % \input{resume/presentation.tex}
 % \input{resume/publications}
 % \input{resume/committees.tex}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on GA Resume</title>
-    <link>https://cric96.github.io/resume/tags/</link>
-    <description>Recent content in Tags on GA Resume</description>
+    <title>Tags on AS Resume</title>
+    <link>https://andrea-serafini.github.io/cv-resume/tags/</link>
+    <description>Recent content in Tags on AS Resume</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://cric96.github.io/resume/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://andrea-serafini.github.io/cv-resume/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
